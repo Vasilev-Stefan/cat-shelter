@@ -19,6 +19,22 @@ const server = http.createServer(async (req, res) => {
             "content-type": 'text/css',
         });
         res.write(css)
+    } else if(req.url === '/cats/add-breed'){
+        const addBreedHtml = await fs.readFile('./src/views/addBreed.html')
+
+        res.writeHead(200, {
+            "content-type": 'text/html'
+        })
+
+        res.write(addBreedHtml);
+    } else if(req.url === '/cats/add-cat'){
+        const addCatHtml = await fs.readFile('./src/views/addCat.html')
+
+        res.writeHead(200, {
+            "content-type": 'text/html'
+        })
+
+        res.write(addCatHtml);
     }
 
 
