@@ -1,0 +1,11 @@
+{
+  "name": "cat-shelter",
+  "version": "1.0.0",
+  "description": "Softuni JS Back End Course Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
