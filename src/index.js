@@ -44,7 +44,7 @@ const server = http.createServer(async (req, res) => {
 server.listen(5000);
 
 async function createHomeHTML () {
-    let homeHtml = await fs.readFile('./src/views/home/index.html', {encoding: 'utf-8'})
+    let homeHtml = await fs.readFile('./src/home.html.js', {encoding: 'utf-8'})
     const databaseString = await fs.readFile('./src/db.json', {encoding: 'utf-8'})
     const database = JSON.parse(databaseString); 
     const cats = database.cats
